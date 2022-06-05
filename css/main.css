@@ -1,3 +1,8 @@
+body {
+  font-family: Montserrat;
+  font-style: normal;
+}
+
 .advantages {
   justify-content: center;
 }
@@ -127,7 +132,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: calc(20/12);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.01em;
   color: #3d3d3d;
 }
 
@@ -144,7 +149,7 @@
     padding-left: 41px;
     font-size: 20px;
     line-height: calc(28/20);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -184,6 +189,7 @@
   background-repeat: no-repeat;
   width: 14px;
   height: 20px;
+  fill: #FF6B09;
   background-image: url(../image/logoicon.svg);
 }
 
