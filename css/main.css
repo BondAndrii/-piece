@@ -9,6 +9,7 @@
   line-height: 1.3;
   letter-spacing: 0.03em;
   color: #111518;
+  margin-top: 0px;
   margin-bottom: 40px;
 }
 
@@ -115,9 +116,13 @@
 
 .guarantee__list {
   position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
   width: calc((108px * 2) + (32px * 1));
+  padding-left: 28px;
+  padding-right: 0px;
   list-style: none;
   font-weight: 500;
   font-size: 12px;
@@ -129,12 +134,14 @@
 @media screen and (min-width: 768px) {
   .guarantee__list {
     width: calc((108px * 4) + (32px * 3));
+    padding-left: 32px;
   }
 }
 
 @media screen and (min-width: 1680px) {
   .guarantee__list {
     width: calc((108px * 8) + (32px * 7));
+    padding-left: 41px;
     font-size: 20px;
     line-height: calc(28/20);
     letter-spacing: 0.08em;
@@ -144,24 +151,53 @@
 .guarantee__list::before {
   content: '';
   position: absolute;
-  left: -28px;
+  left: 0px;
   height: 100%;
-  border: 1px dashed red;
+  border: 1px dashed #B9B9B9;
 }
 
-@media screen and (min-width: 768px) {
-  .guarantee__list::before {
-    left: -32px;
-  }
-}
-
-@media screen and (min-width: 1680px) {
-  .guarantee__list::before {
-    left: -41px;
-  }
+.guarantee__item {
+  position: relative;
 }
 
 .guarantee__item--accent {
   color: #FF6B09;
+}
+
+.guarantee__item + .guarantee__item {
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .guarantee__item + .guarantee__item {
+    margin-top: 20px;
+  }
+}
+
+.guarantee__item::before {
+  position: absolute;
+  left: -34px;
+  display: inline-block;
+  align-items: center;
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 20px;
+  background-image: url(../image/logoicon.svg);
+}
+
+@media screen and (min-width: 768px) {
+  .guarantee__item::before {
+    left: -38px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .guarantee__item::before {
+    width: 22px;
+    height: 30px;
+    left: -52px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
