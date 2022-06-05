@@ -116,7 +116,23 @@ body {
 
 .container__guarantee {
   display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #F1F1F1;
+}
+
+@media screen and (min-width: 768px) {
+  .container__guarantee {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .container__guarantee {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .guarantee__list {
@@ -126,7 +142,6 @@ body {
   margin-right: auto;
   margin-left: auto;
   width: calc((108px * 2) + (32px * 1));
-  padding-left: 28px;
   padding-right: 0px;
   list-style: none;
   font-weight: 500;
@@ -139,63 +154,60 @@ body {
 @media screen and (min-width: 768px) {
   .guarantee__list {
     width: calc((108px * 4) + (32px * 3));
-    padding-left: 32px;
   }
 }
 
 @media screen and (min-width: 1680px) {
   .guarantee__list {
     width: calc((108px * 8) + (32px * 7));
-    padding-left: 41px;
     font-size: 20px;
     line-height: calc(28/20);
     letter-spacing: 0.01em;
   }
 }
 
-.guarantee__list::before {
-  content: '';
-  position: absolute;
-  left: 0px;
-  height: 100%;
-  border: 1px dashed #B9B9B9;
-}
-
 .guarantee__item {
   position: relative;
+  padding-left: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .guarantee__item {
+    padding-left: 32px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .guarantee__item {
+    padding-left: 41px;
+  }
 }
 
 .guarantee__item--accent {
   color: #FF6B09;
 }
 
-.guarantee__item + .guarantee__item {
-  margin-top: 24px;
-}
-
-@media screen and (min-width: 768px) {
-  .guarantee__item + .guarantee__item {
-    margin-top: 20px;
-  }
-}
-
 .guarantee__item::before {
   position: absolute;
-  left: -34px;
+  left: -7px;
+  top: -5px;
   display: inline-block;
   align-items: center;
   content: '';
+  background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
   width: 14px;
-  height: 20px;
+  height: 30px;
+  background-color: #F1F1F1;
   fill: #FF6B09;
   background-image: url(../image/logoicon.svg);
 }
 
 @media screen and (min-width: 768px) {
   .guarantee__item::before {
-    left: -38px;
+    top: -5px;
+    left: -7px;
   }
 }
 
@@ -203,7 +215,18 @@ body {
   .guarantee__item::before {
     width: 22px;
     height: 30px;
-    left: -52px;
+    left: -11px;
+  }
+}
+
+.guarantee__item:not(:last-child) {
+  padding-bottom: 24px;
+  border-left: 1px dashed red;
+}
+
+@media screen and (min-width: 768px) {
+  .guarantee__item:not(:last-child) {
+    padding-bottom: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
